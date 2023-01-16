@@ -1,0 +1,68 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Blank
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <form [formGroup]="formulario" (ngSubmit)="autenticar()">
+  <ion-grid>
+
+    <ion-row>
+      <ion-col>
+        <ion-item>
+          <ion-label position="stacked">Usuario</ion-label>
+          <ion-input formControlName="username" type="text" placeholder="Ingresa tu usuario"></ion-input>
+        </ion-item>
+
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col>
+        <ion-item>
+          <ion-label position="stacked">Contraseña</ion-label>
+          <ion-input
+          formControlName="password"
+          type="password"
+          placeholder="Ingresa tu contraseña"
+          >
+        </ion-input>
+        </ion-item>
+
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col>
+        <ion-item>
+          <ion-label>Recuérdame</ion-label>
+          <ion-toggle
+          mode="ios"
+          formControlName="activo"
+          slot="end"
+          color="danger"
+          >
+        </ion-toggle>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col>
+        <ion-button
+        role="submit"
+        expand="full"
+        color="success"
+        type="submit"
+        >
+          Ingresar
+        </ion-button>
+      </ion-col>
+    </ion-row>
+
+  </ion-grid>
+</form>
+</ion-content>
